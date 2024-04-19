@@ -1,0 +1,89 @@
+body {
+    margin: auto;
+    width: 50%;
+    font-family: "Playfair Display";
+}
+
+h3, h4 {
+    margin: 0;
+}
+
+.color-block {
+    background-color: gray;
+    height: 2em;
+    width: 2em;
+    margin: .2%;
+}
+
+.color-block-answer {
+    background-color: rgb(69, 54, 39);
+    height: 1em;
+    width: 1em;
+    margin: 0 .5%;
+}
+
+.current-row .color-block {
+    background-color: rgb(174, 174, 174);
+}
+
+.color-picker {
+    display: none;
+    margin-top: 100%;
+    flex-direction: row;
+    width: 6em;
+    flex-wrap: wrap;
+    position: relative;
+    border: solid .3em black;
+    background-color: white;
+}
+
+.color-block-picker {
+    height: 2em;
+    width: 2em;
+}
+
+.blocks, #answers, .blocks-correct {
+    display: flex;
+    flex-direction: row;
+}
+
+#result {
+    background-color: aliceblue;
+    padding: 1% 5%;
+    margin-top: 5%;
+    width: 30%;
+    display: none;
+}
+
+#answers {
+    margin-top: 1.5%;
+}
+
+button {
+    background-color: #4cabd8;
+    border-radius: .5em;
+    border: solid .2em black;
+    padding: .5% 1%;
+}
+
+button:active {
+    box-shadow: 1px 1px 5px rgb(79, 79, 79);
+}
+
+button:hover {
+    background-color: #439cc5;
+}
+
+.options {
+    margin-bottom: 2%;
+}
+
+.rules p {
+    font-size: 14px;
+}
+
+input[type=number] {
+    width: 5%;
+    border: black solid .2em;
+    border-radius: .3em;
+}
