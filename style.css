@@ -1,7 +1,7 @@
 body {
-    margin: auto;
-    width: 50%;
-    font-family: "Playfair Display";
+    margin: auto !important;
+    width: 30%;
+    font-family: "Playfair Display" !important;
 }
 
 h3, h4 {
@@ -10,16 +10,16 @@ h3, h4 {
 
 .color-block {
     background-color: gray;
-    height: 2em;
-    width: 2em;
-    margin: .2%;
+    height: 3em;
+    width: 3em;
+    margin: .5%;
 }
 
 .color-block-answer {
     background-color: rgb(69, 54, 39);
-    height: 1em;
-    width: 1em;
-    margin: 0 .5%;
+    height: 1.5em;
+    width: 1.5em;
+    margin: 1%;
 }
 
 .current-row .color-block {
@@ -30,7 +30,7 @@ h3, h4 {
     display: none;
     margin-top: 100%;
     flex-direction: row;
-    width: 6em;
+    width: 6.58em;
     flex-wrap: wrap;
     position: relative;
     border: solid .3em black;
@@ -45,23 +45,23 @@ h3, h4 {
 .blocks, #answers, .blocks-correct {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 #result {
-    background-color: aliceblue;
-    padding: 1% 5%;
-    margin-top: 5%;
-    width: 30%;
+    background-color: #439cc5;
+    padding: 5%;
+    margin: 5% auto 0;
+    width: 70%;
     display: none;
-}
-
-#answers {
-    margin-top: 1.5%;
+    border-radius: 1em;
+    text-align: center;
 }
 
 button {
     background-color: #4cabd8;
-    border-radius: .5em;
+    border-radius: .5em !important;
     border: solid .2em black;
     padding: .5% 1%;
 }
@@ -75,7 +75,26 @@ button:hover {
 }
 
 .options {
-    margin-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 auto 2%;
+    padding: 0 12%;
+}
+
+.options div {
+    margin: 0 auto 3%;
+    width: 100%;
+}
+
+#game {
+    background-color: #ececec;
+    padding: 5%;
+    border-radius: 5%;
+}
+
+.rules {
+    display: none;
 }
 
 .rules p {
@@ -83,7 +102,34 @@ button:hover {
 }
 
 input[type=number] {
-    width: 5%;
+    width: 25%;
     border: black solid .2em;
     border-radius: .3em;
+}
+
+.modal-header {
+    justify-content: space-between;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-circle-question {
+    font-size: 1.5em;
+}
+
+@media only screen and (max-width: 900px) {
+}
+
+@media only screen and (max-width: 600px) {
+    input[type="number"] {
+        width: 25% !important;
+    }
+
+    body {
+        width: 100%;
+    }
 }

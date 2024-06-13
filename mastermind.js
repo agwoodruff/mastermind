@@ -1,4 +1,4 @@
-const colorArray = ["rgb(255, 0, 0)", "rgb(0, 255, 0)", "rgb(0, 0, 255)", "rgb(0, 0, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 255)", "rgb(255, 0, 255)", "rgb(98, 18, 46)"];
+const colorArray = ["rgb(255, 0, 0)", "rgb(0, 255, 0)", "rgb(0, 0, 255)", "rgb(0, 0, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 255)", "rgb(255, 0, 255)", "rgb(98, 18, 46)",  "rgb(255, 255, 255)"];
 let gameCode = [];
 let allowDuplicates = $("#allowDuplicates").is(':checked');
 let currentRow = 1;
@@ -149,7 +149,7 @@ function gameResult(result) {
 
 function generateCode() {
     while (gameCode.length < codeLength) {
-        let num = Math.floor(Math.random() * 8);
+        let num = Math.floor(Math.random() * colorArray.length);
 
         // check if color is already included in code
         if (allowDuplicates) {
@@ -162,3 +162,11 @@ function generateCode() {
     }
     //console.log(gameCode);
 }
+
+$(document).on('click', '.fa-circle-question', function(event) {
+    $(".rules").css("display", "block");
+});
+
+$(document).on('click', '.fa-xmark', function(event) {
+    $(".rules").css("display", "none");
+});
